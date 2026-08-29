@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 import { company, navigation } from "@/lib/company";
 
@@ -53,8 +52,9 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="eyebrow mb-5 text-cream/60">Contact</p>
+            <p className="eyebrow mb-5 text-cream/60">Company</p>
             <address className="space-y-3 text-sm leading-6 not-italic text-cream/75">
+              <p>{company.legalName}</p>
               <p>
                 {company.addressLine}
                 <br />
@@ -62,26 +62,19 @@ export function Footer() {
                 <br />
                 {company.country}
               </p>
-              <p>
-                <a
-                  className="text-link-dark inline-flex items-center gap-1.5"
-                  href={`mailto:${company.email}`}
-                >
-                  {company.email}
-                  <ArrowUpRight className="size-3.5" aria-hidden="true" />
-                </a>
-                <br />
-                <a className="text-link-dark" href={company.phoneHref}>
-                  {company.phoneDisplay}
-                </a>
-              </p>
             </address>
+            <Link
+              href="/contact"
+              className="text-link-dark mt-6 inline-block text-sm"
+            >
+              Start a conversation
+            </Link>
           </div>
         </div>
 
         <div className="flex flex-col gap-2 py-6 text-[0.67rem] tracking-[0.11em] text-cream/50 uppercase sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 {company.legalName}</p>
-          <p>Wyoming marketing consulting firm · Operates online</p>
+          <p>Wyoming · United States</p>
         </div>
       </div>
     </footer>
