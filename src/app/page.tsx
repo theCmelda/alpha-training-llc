@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Practical online consulting and training for clearer advertising, stronger funnels, and more disciplined customer acquisition.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Marketing Consulting & Digital Training \u00b7 ALPHA TRAINING LLC",
+    title: "Marketing Consulting & Digital Training - ALPHA TRAINING LLC",
     description:
       "Practical online consulting and training for advertising, funnels, and customer acquisition.",
     url: "/",
@@ -33,7 +33,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <span className="size-2 rounded-full bg-copper" />
               <p className="eyebrow text-ink/65">
-                Independent marketing practice \u00b7 Sheridan, Wyoming
+                Independent marketing practice, Sheridan, Wyoming
               </p>
             </div>
             <div className="py-16 md:py-20">
@@ -49,7 +49,7 @@ export default function Home() {
                 </p>
                 <p className="text-sm leading-6 text-ink/65">
                   We help turn scattered marketing activity into a clear,
-                  measurable operating plan\u2014without unnecessary complexity.
+                  measurable operating plan, without unnecessary complexity.
                 </p>
               </div>
             </div>
