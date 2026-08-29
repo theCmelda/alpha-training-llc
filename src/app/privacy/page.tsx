@@ -5,13 +5,11 @@ import { company } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description:
-    "Privacy policy for the ALPHA TRAINING LLC website and business inquiries.",
+  description: "Privacy policy for the ALPHA TRAINING LLC website.",
   alternates: { canonical: "/privacy" },
   openGraph: {
-    title: "Privacy Policy · ALPHA TRAINING LLC",
-    description:
-      "How ALPHA TRAINING LLC handles website and business inquiry information.",
+    title: "Privacy Policy \u00b7 ALPHA TRAINING LLC",
+    description: "How ALPHA TRAINING LLC handles website information.",
     url: "/privacy",
   },
 };
@@ -22,25 +20,18 @@ export default function PrivacyPage() {
       label="Legal"
       title="Privacy policy"
       updated="August 29, 2026"
-      introduction="This policy explains how ALPHA TRAINING LLC handles information associated with this website, business inquiries, consulting services, and digital training."
+      introduction="This policy explains how ALPHA TRAINING LLC handles information associated with this website and its business operations."
       sections={[
         {
-          title: "Information you provide",
+          title: "Information collected",
           content: (
-            <>
-              <p>
-                You may provide information when you contact us or work with us,
-                including your name, email address, phone number, company name,
-                inquiry details, correspondence, and information needed to
-                deliver requested services.
-              </p>
-              <p>
-                The contact form on this website does not send information to a
-                website database. It prepares an email in your own email
-                application. Information is transmitted only when you choose to
-                send that email through your email provider.
-              </p>
-            </>
+            <p>
+              This website does not include a contact form and does not ask
+              visitors to submit personal details. If you write to the company
+              by post or otherwise choose to share information while working
+              with us, that correspondence may include details you decide to
+              provide.
+            </p>
           ),
         },
         {
@@ -62,11 +53,10 @@ export default function PrivacyPage() {
             <>
               <p>We may use information to:</p>
               <ul>
-                <li>Respond to questions and evaluate service inquiries;</li>
-                <li>Prepare proposals and communicate about engagements;</li>
-                <li>Provide consulting or digital training you request;</li>
-                <li>Maintain business and legal records;</li>
-                <li>Protect the website, company, and users; and</li>
+                <li>Operate and secure the website;</li>
+                <li>Respond when you choose to contact the company;</li>
+                <li>Provide requested consulting or digital training;</li>
+                <li>Maintain business and legal records; and</li>
                 <li>Comply with applicable legal obligations.</li>
               </ul>
             </>
@@ -77,30 +67,24 @@ export default function PrivacyPage() {
           content: (
             <p>
               We do not sell personal information. Information may be shared
-              with service providers that support website hosting, email,
-              document delivery, communications, or other business operations;
-              with professional advisers when appropriate; or when required to
-              comply with law, legal process, or protect legal rights. Providers
-              process information under their own terms and privacy practices.
+              with service providers that support website hosting or other
+              business operations; with professional advisers when appropriate;
+              or when required to comply with law, legal process, or protect
+              legal rights. Providers process information under their own terms
+              and privacy practices.
             </p>
           ),
         },
         {
           title: "Retention and security",
           content: (
-            <>
-              <p>
-                We retain inquiry, client, and business records for as long as
-                reasonably necessary for the purposes described in this policy,
-                including service delivery, recordkeeping, dispute resolution,
-                and legal compliance.
-              </p>
-              <p>
-                We use reasonable administrative and technical measures suited
-                to a small online business. No email, storage system, or internet
-                transmission can be guaranteed completely secure.
-              </p>
-            </>
+            <p>
+              We retain business records for as long as reasonably necessary
+              for recordkeeping, dispute resolution, and legal compliance. We
+              use reasonable administrative and technical measures suited to a
+              small online business. No storage system or internet transmission
+              can be guaranteed completely secure.
+            </p>
           ),
         },
         {
@@ -109,9 +93,8 @@ export default function PrivacyPage() {
             <p>
               You may ask about, correct, or request deletion of personal
               information you have provided, subject to records we need to keep
-              for legal or legitimate business purposes. You may also choose not
-              to provide optional information. To make a request, email{" "}
-              <a href={`mailto:${company.email}`}>{company.email}</a>.
+              for legal or legitimate business purposes. Send written requests
+              to the company address below.
             </p>
           ),
         },
@@ -119,9 +102,8 @@ export default function PrivacyPage() {
           title: "Third-party services and links",
           content: (
             <p>
-              This website may link to services we do not operate, including
-              your email provider when you use a mail link. Their privacy
-              practices are governed by their own policies. We are not
+              This website may link to services we do not operate. Their
+              privacy practices are governed by their own policies. We are not
               responsible for third-party websites or services.
             </p>
           ),
@@ -152,11 +134,11 @@ export default function PrivacyPage() {
             <address className="not-italic">
               {company.legalName}
               <br />
-              {company.fullAddress}
+              {company.addressLine}
               <br />
-              <a href={`mailto:${company.email}`}>{company.email}</a>
+              {company.cityLine}
               <br />
-              <a href={company.phoneHref}>{company.phoneDisplay}</a>
+              {company.country}
             </address>
           ),
         },
