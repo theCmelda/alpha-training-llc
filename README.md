@@ -1,38 +1,19 @@
 # ALPHA TRAINING LLC website
 
 Public company site for **ALPHA TRAINING LLC**, a Wyoming marketing consulting
-and digital training practice. Copy covers advertising, funnels, and customer
-acquisition. Contact opens a `mailto:` draft to `dancmelda@gmail.com` after
-client-side validation. There is no backend, auth, or database.
+and digital training practice.
 
 ## Live
 
 - Site: [https://tryalpha.training](https://tryalpha.training)
 - Fallback: [https://alpha-training-llc.vercel.app](https://alpha-training-llc.vercel.app)
 - GitHub: [https://github.com/theCmelda/alpha-training-llc](https://github.com/theCmelda/alpha-training-llc)
-- Vercel project: `alpha-training-llc`
 
 Routes: `/` `/about` `/services` `/contact` `/privacy` `/terms`
 
 ## Run locally
 
-Requirements: Node.js 20+ and npm.
-
 ```bash
 npm install
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-```bash
-npm run lint
-npm run build
-```
-
-## Stack
-
-Next.js 16 App Router, TypeScript, Tailwind CSS v4, shadcn/ui.
-
-`NEXT_PUBLIC_SITE_URL` is `https://tryalpha.training`. DNS is on Cloudflare.
-The production hostname is attached on Vercel; `www` 308-redirects to the apex.
