@@ -7,9 +7,10 @@ client-side validation. There is no backend, auth, or database.
 
 ## Live
 
-- Site: [https://alpha-training-llc.vercel.app](https://alpha-training-llc.vercel.app)
+- Site: [https://tryalpha.training](https://tryalpha.training)
+- Fallback: [https://alpha-training-llc.vercel.app](https://alpha-training-llc.vercel.app)
 - GitHub: [https://github.com/theCmelda/alpha-training-llc](https://github.com/theCmelda/alpha-training-llc)
-- Vercel project: `alpha-training-llc` on the `daniel-9961s-projects` team
+- Vercel project: `alpha-training-llc`
 
 Routes: `/` `/about` `/services` `/contact` `/privacy` `/terms`
 
@@ -33,12 +34,5 @@ npm run build
 
 Next.js 16 App Router, TypeScript, Tailwind CSS v4, shadcn/ui.
 
-`NEXT_PUBLIC_SITE_URL` is set on Vercel to the current production origin. When a
-custom domain is attached, update that variable and redeploy.
-
-## Custom domain
-
-Buy the domain (suggested: `alphatrainingllc.com`) anywhere. Then send the exact
-hostname. The domain will be added to this Vercel project; if DNS is elsewhere,
-use the records Vercel shows after add. Do not invent records before the domain
-exists.
+`NEXT_PUBLIC_SITE_URL` is `https://tryalpha.training`. DNS is on Cloudflare.
+The production hostname is attached on Vercel; `www` 308-redirects to the apex.

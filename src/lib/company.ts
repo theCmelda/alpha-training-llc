@@ -15,7 +15,7 @@ export const company = {
 } as const;
 
 export const siteUrl = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://alphatrainingllc.com",
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://tryalpha.training",
 );
 
 export const navigation = [
