@@ -53,63 +53,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-cream">
-        <div className="container-site grid md:grid-cols-12">
-          <div className="relative flex min-h-[30rem] items-center justify-center overflow-hidden border-b border-cream/15 py-16 md:col-span-5 md:border-r md:border-b-0">
-            <div
-              className="absolute inset-8 border border-cream/15"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute top-1/2 left-1/2 size-64 -translate-1/2 rounded-full border border-copper/70"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute top-1/2 left-1/2 h-px w-[85%] -translate-1/2 rotate-[-28deg] bg-cream/20"
-              aria-hidden="true"
-            />
-            <span className="relative font-heading text-[9rem] leading-none text-cream">
-              DJ
-            </span>
-          </div>
-
-          <div className="flex flex-col justify-center px-0 py-16 md:col-span-7 md:px-14 md:py-24 lg:px-20">
-            <p className="eyebrow text-copper-light">Primary contact</p>
-            <h2 className="mt-5 font-heading text-6xl">Daniel Jedlicka</h2>
-            <div className="mt-8 max-w-xl space-y-5 text-base leading-7 text-cream/70">
-              <p>
-                Daniel Jedlicka is the primary contact for inquiries and
-                project discussions with ALPHA TRAINING LLC.
-              </p>
-              <p>
-                This direct communication model keeps the initial question,
-                proposed scope, and agreed deliverables clear throughout an
-                engagement.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="container-site py-20 md:py-28">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="eyebrow text-copper">How we operate</p>
-            <h2 className="section-title mt-5">Online, direct, and project-led.</h2>
+            <h2 className="section-title mt-5">Focused and project-led.</h2>
           </div>
           <div className="grid gap-px bg-ink/20 sm:grid-cols-2 md:col-span-7 md:col-start-6">
             {[
               [
-                "Online delivery",
-                "Consulting, collaboration, and training are delivered online. The company does not operate a physical store.",
-              ],
-              [
                 "Defined scope",
                 "Consulting engagements begin with a written scope covering the work, deliverables, timing, and fees.",
-              ],
-              [
-                "Direct communication",
-                `Initial inquiries are handled by ${company.contactName}, the company's primary contact.`,
               ],
               [
                 "Clear legal identity",
@@ -133,29 +87,19 @@ export default function AboutPage() {
       <section className="border-t border-ink/20 bg-paper">
         <div className="container-site grid gap-12 py-20 md:grid-cols-12 md:py-28">
           <div className="md:col-span-4">
-            <p className="eyebrow text-copper">Company details</p>
-            <h2 className="mt-5 font-heading text-5xl">Public record.</h2>
+            <p className="eyebrow text-copper">Company</p>
+            <h2 className="mt-5 font-heading text-5xl">Where we are.</h2>
           </div>
-          <dl className="md:col-span-7 md:col-start-6">
-            {[
-              ["Legal name", company.legalName],
-              ["Jurisdiction", "Wyoming"],
-              ["Formation date", company.formed],
-              ["Wyoming Filing ID", company.filingId],
-              ["Business address", company.fullAddress],
-              ["Primary contact", company.contactName],
-              ["Email", company.email],
-              ["Phone", company.phoneDisplay],
-            ].map(([term, detail]) => (
-              <div
-                key={term}
-                className="grid gap-2 border-t border-ink/25 py-5 sm:grid-cols-[11rem_1fr]"
-              >
-                <dt className="eyebrow pt-1 text-ink/65">{term}</dt>
-                <dd className="text-sm leading-6 font-medium">{detail}</dd>
-              </div>
-            ))}
-          </dl>
+          <address className="not-italic md:col-span-7 md:col-start-6">
+            <p className="font-heading text-4xl">{company.legalName}</p>
+            <p className="mt-6 text-base leading-7 text-ink/70">
+              {company.addressLine}
+              <br />
+              {company.cityLine}
+              <br />
+              {company.country}
+            </p>
+          </address>
         </div>
       </section>
 
